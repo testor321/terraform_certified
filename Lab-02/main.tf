@@ -4,6 +4,7 @@
 # Build WebServer during Bootstrap
 #
 # Made by Denis Astahov
+# updated by rfom
 #----------------------------------------------------------
 
 provider "aws" {
@@ -25,7 +26,7 @@ chkconfig httpd on
 EOF
   tags = {
     Name  = "WebServer Built by Terraform"
-    Owner = "Denis Astahov"
+    Owner = "rfom"
   }
 }
 
@@ -59,6 +60,6 @@ resource "aws_security_group" "web" {
 
   tags = {
     Name  = "WebServer SG by Terraform"
-    Owner = "Denis Astahov"
+    Owner = "rfom"
   }
 }
